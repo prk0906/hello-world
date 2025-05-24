@@ -1,0 +1,14 @@
+<style>
+    .glyphicon{
+        color: #ccc;
+        cursor: pointer;
+    }
+    .highlighted{
+        color: deeppink;
+    }
+</style>
+
+<span class="glyphicon glyphicon-heart"
+    [class.highlighted]="isLiked"
+    (click)="onClick()"
+    >{{likesCount}}</span>
