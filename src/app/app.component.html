@@ -11,3 +11,37 @@
 [likesCount]="tweet.likesCount"
 (likechanges)="onLikeChanged($event)"></likes> -->
 
+
+<!-- ngIf -->
+<!-- <div *ngIf="courses.length>0; else noCourses">
+    List Of Courses
+</div>
+<ng-template #noCourses>
+    No Courses Yet
+</ng-template> -->
+<!-- <div *ngIf="courses.length>0;then coursesList else noCourses"></div>
+<ng-template #coursesList>
+    List Of Courses
+</ng-template>
+<ng-template #noCourses>
+    No Courses Yet`
+</ng-template> -->
+
+<!-- hidden -->
+ <!-- <div [hidden]="courses.length>0">
+    Course List
+ </div>
+ <div [hidden]="courses.length==0">
+    No Course yet
+ </div> -->
+
+ <!-- ngSwitchCase -->
+  <ul class="nav nav-pills">
+    <li [class.active]="viewmode=='map'"><a (click)="viewmode='map'">Map View</a></li>
+    <li [class.active]="viewmode=='list'"><a (click)="viewmode='list'">List View</a></li>
+  </ul>
+  <div [ngSwitch]="viewmode">
+        <div *ngSwitchCase="'map'">Map View Content</div>
+        <div *ngSwitchCase="'list'">List View Content</div>
+        <div *ngSwitchDefault>OtherWise</div>
+  </div>
