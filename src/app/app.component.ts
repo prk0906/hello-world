@@ -13,7 +13,7 @@ import { LikesComponent } from './likes/likes.component';
   imports: [RouterOutlet, CoursesComponents,CommonModule,PanelComponent,LikesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
-})
+}) 
 export class AppComponent {
   // post={
   //   title:"Title",
@@ -30,6 +30,19 @@ export class AppComponent {
   // onLikeChanged($event:any){
   //   console.log("like state Changes ",$event);
   // }
-  // courses=[1,2];
-  viewmode = 'somethingElses';
+  courses=[
+    {id:1,course:"course1"},
+    {id:2,course:"course2"},
+    {id:3,course:"course3"},
+  ];
+  onAdd()
+  {
+    this.courses.push({id:4,course:"Course4"});
+  }
+  OnRemove(course:any)
+  {
+    let index = this.courses.indexOf(course);
+    this.courses.splice(index,1);
+  }
+  // viewmode = 'somethingElses';
 }

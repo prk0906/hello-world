@@ -36,7 +36,7 @@
  </div> -->
 
  <!-- ngSwitchCase -->
-  <ul class="nav nav-pills">
+  <!-- <ul class="nav nav-pills">
     <li [class.active]="viewmode=='map'"><a (click)="viewmode='map'">Map View</a></li>
     <li [class.active]="viewmode=='list'"><a (click)="viewmode='list'">List View</a></li>
   </ul>
@@ -44,4 +44,13 @@
         <div *ngSwitchCase="'map'">Map View Content</div>
         <div *ngSwitchCase="'list'">List View Content</div>
         <div *ngSwitchDefault>OtherWise</div>
-  </div>
+  </div> -->
+
+  <!-- ngFor -->
+   <button (click)="onAdd()">Add</button>
+   <ul>
+    <li *ngFor="let course of courses; last as isEven">
+        {{course.course}} 
+        <button (click)="OnRemove(course)">Remove</button>
+    </li>
+   </ul>
