@@ -30,11 +30,11 @@ export class AppComponent {
   // onLikeChanged($event:any){
   //   console.log("like state Changes ",$event);
   // }
-  courses=[
-    {id:1,course:"course1"},
-    {id:2,course:"course2"},
-    {id:3,course:"course3"},
-  ];
+
+    // viewmode = 'somethingElses';
+
+  //ngFor
+  courses: any;
   onAdd()
   {
     this.courses.push({id:4,course:"Course4"});
@@ -44,5 +44,24 @@ export class AppComponent {
     let index = this.courses.indexOf(course);
     this.courses.splice(index,1);
   }
-  // viewmode = 'somethingElses';
+  loadCourses(){
+    this.courses=[
+    {id:1,course:"course1"},
+    {id:2,course:"course2"},
+    {id:3,course:"course3"},
+  ]
+  }
+  trackCourse(index:any,course:any){
+    return course?course.id:undefined
+  }
+
+  // ngStyle
+  canSave = true;
+
+  //ngSafeTravesal
+
+  task={
+    title:'Review application',
+    assigne:null
+  }
 }
