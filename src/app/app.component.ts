@@ -4,11 +4,12 @@ import { CoursesComponents } from "./courses.component";
 import { CommonModule } from '@angular/common';
 import { PanelComponent } from './panel/panel.component';
 import { InputFormatDirective } from './input-format.directive';
+import { ZippyComponent } from "./zippy/zippy.component";
 
 @Component({
   selector: 'app-root',
   standalone:true,
-  imports: [RouterOutlet, CoursesComponents,CommonModule,PanelComponent,InputFormatDirective],
+  imports: [RouterOutlet, CoursesComponents, CommonModule, PanelComponent, InputFormatDirective, ZippyComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 }) 
