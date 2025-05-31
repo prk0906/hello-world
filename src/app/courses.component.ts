@@ -7,7 +7,7 @@ import { SummaryPipe } from "./summary.pipe";
 @Component({
     selector:'course',
     standalone:true,
-    imports:[CommonModule,FormsModule,SummaryPipe],
+    imports:[CommonModule,FormsModule],
     providers:[CoursesService],
     template:`
         <!-- {{ course.courseTitle | uppercase | lowercase}} <br>

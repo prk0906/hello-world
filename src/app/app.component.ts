@@ -2,15 +2,13 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CoursesComponents } from "./courses.component";
 import { CommonModule } from '@angular/common';
-import { title } from 'process';
 import { PanelComponent } from './panel/panel.component';
-import { LikesComponent } from './likes/likes.component';
-
+import { InputFormatDirective } from './input-format.directive';
 
 @Component({
   selector: 'app-root',
   standalone:true,
-  imports: [RouterOutlet, CoursesComponents,CommonModule,PanelComponent,LikesComponent],
+  imports: [RouterOutlet, CoursesComponents,CommonModule,PanelComponent,InputFormatDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 }) 
