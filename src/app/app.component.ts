@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CoursesComponents } from "./courses.component";
 import { CommonModule } from '@angular/common';
-import { PanelComponent } from './panel/panel.component';
-import { InputFormatDirective } from './input-format.directive';
-import { ZippyComponent } from "./zippy/zippy.component";
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { UdcourseFormComponent } from './udcourse-form/udcourse-form.component';
 
 @Component({
   selector: 'app-root',
   standalone:true,
-  imports: [RouterOutlet, CoursesComponents, CommonModule, PanelComponent, InputFormatDirective, ZippyComponent],
+  imports: [RouterOutlet, CommonModule, ContactFormComponent,UdcourseFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 }) 
