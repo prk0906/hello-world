@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { UdcourseFormComponent } from './udcourse-form/udcourse-form.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 @Component({
   selector: 'app-root',
   standalone:true,
-  imports: [RouterOutlet, CommonModule, ContactFormComponent,UdcourseFormComponent],
+  imports: [RouterOutlet, CommonModule, ContactFormComponent,UdcourseFormComponent,SignupFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 }) 
