@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup,FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { UserNameValidators } from './username.validators';
 
 @Component({
   selector: 'signup-form',
@@ -11,14 +12,25 @@ import { CommonModule } from '@angular/common';
 })
 export class SignupFormComponent {
   form = new FormGroup({
-    username : new FormControl('',[Validators.required,Validators.minLength(3)]),
-    password : new FormControl('',Validators.required)
-  })
+    account: new FormGroup({
+      username : new FormControl('',[Validators.required,
+      Validators.minLength(3),
+      UserNameValidators.cannotConatinSpace],
+      UserNameValidators.shouldBeUnique),
+      password : new FormControl('',Validators.required)
+    })
+  });
+
+  logIn(){
+    this.form.setErrors({
+      inValidLogin:true
+    });
+  }
 
   get userName(){
-    return this.form.get('username');
+    return this.form.get('account.username');
   }
   get passWord(){
-    return this.form.get('password');
+    return this.form.get('account.password');
   }
 }
