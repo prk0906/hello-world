@@ -5,11 +5,14 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { UdcourseFormComponent } from './udcourse-form/udcourse-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
+import { PasswordConfrimationFormComponent } from './password-confrimation-form/password-confrimation-form.component';
 
 @Component({
   selector: 'app-root',
   standalone:true,
-  imports: [RouterOutlet, CommonModule, ContactFormComponent,UdcourseFormComponent,SignupFormComponent,NewCourseFormComponent],
+  imports: [RouterOutlet, CommonModule, ContactFormComponent,UdcourseFormComponent,SignupFormComponent,NewCourseFormComponent
+            ,PasswordConfrimationFormComponent
+            ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 }) 
